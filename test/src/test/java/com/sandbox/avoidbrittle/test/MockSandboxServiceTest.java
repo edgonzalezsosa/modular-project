@@ -20,7 +20,11 @@ public class MockSandboxServiceTest {
 
     @BeforeAll
     static void displayStartingMessage() {
-        System.out.println("--------------------TESTING FOR SANDBOXSERVICE IN PROGRESS--------------------");
+        System.out.println("[INFO] -------------------------------------------------------");
+        System.out.println("[INFO] ");
+        System.out.println("[INFO] TESTING FOR SANDBOXSERVICE IN PROGRESS");
+        System.out.println("[INFO] ");
+        System.out.println("[INFO] -------------------------------------------------------");
     }
 
     public MockSandboxServiceTest() {
