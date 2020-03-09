@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 
 public class SandboxRepositoryTests extends Tests {
 
@@ -23,6 +24,13 @@ public class SandboxRepositoryTests extends Tests {
     @Test
     public void instantiationSmokeTest() {
         Assertions.assertNotNull(sandboxRepository);
+    }
+
+    @Test
+    public void retrieveHelloTest() {
+        String expected = "Hello World!";
+        Mockito.when(sandboxRepository.retrieveHello()).thenReturn("Hello World!");
+        Assertions.assertEquals(expected, sandboxRepository.retrieveHello());
     }
 
 }
